@@ -1,15 +1,25 @@
 package com.example.demowebapp;
 
-public class User {
-   private String nome;
-  private  String provincia;
-   private String saluto;
+import java.time.OffsetDateTime;
 
-    public User(String nome,String provincia,String saluto) {
+public class User {
+    private String nome;
+    private String provincia;
+    private String saluto;
+    private OffsetDateTime dataDiNascita;
+
+    public User(String nome, String provincia, String saluto, OffsetDateTime dataDiNascita) {
         this.nome = nome;
         this.saluto = saluto;
         this.provincia = provincia;
+        this.dataDiNascita = dataDiNascita;
     }
+
+    public User() {
+
+    }
+
+    ;
 
     public String getNome() {
         return nome;
@@ -41,6 +51,8 @@ public class User {
                 "nome='" + nome + '\'' +
                 ", provincia='" + provincia + '\'' +
                 ", saluto='" + saluto + '\'' +
+                ", dataDiNascita=" + dataDiNascita +
                 '}';
     }
 }
+
